@@ -1,0 +1,63 @@
+{
+	"name": "CollageMaker",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"postCreateCommand": "pip install -e .",
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": {
+		"autoDocstring.docstringFormat": "sphinx",
+		"autoDocstring.guessTypes": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll.markdownlint": true,
+			"source.organizeImports": true
+		},
+		"editor.formatOnSave": true,
+		"editor.suggestSelection": "first",
+		"git.autofetch": true,
+		"git.confirmSync": false,
+		"pylance.insidersChannel": "daily",
+		"python.analysis.typeCheckingMode": "basic",
+		"python.analysis.extraPaths": [
+			"./collamake"
+		],
+		"python.experiments.optInto": [
+			"All"
+		],
+		"python.formatting.blackArgs": [
+			"--line-length",
+			"127"
+		],
+		"python.formatting.provider": "black",
+		"python.linting.pydocstyleEnabled": true,
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Args": [
+			"--max-line-length=127",
+			"--max-complexity=10"
+		],
+		"python.linting.flake8Enabled": true,
+		"python.linting.mypyEnabled": true,
+		"python.sortImports.args": [
+			"-l 127",
+			"-p collamake"
+		],
+		"python.testing.pytestArgs": [
+			"tests"
+		],
+		"python.testing.pytestEnabled": true,
+		"[markdown]": {
+			"editor.formatOnSave": true
+		}
+	},
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	"extensions": [
+		"DavidAnson.vscode-markdownlint",
+		"github.vscode-pull-request-github",
+		"ms-azuretools.vscode-docker",
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"redhat.vscode-yaml",
+		"visualstudioexptteam.vscodeintellicode",
+		"ZainChen.json"
+	]
+}

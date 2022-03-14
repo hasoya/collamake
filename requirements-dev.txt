@@ -1,0 +1,9 @@
+black
+coverage
+flake8
+mypy
+pydocstyle
+pytest
+types-PyYAML
+types-setuptools
+wheel

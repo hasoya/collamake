@@ -1,0 +1,8 @@
+input_dir:
+  - path: test_data/split_2
+    num_pics: 2
+  - path: test_data/split_4
+    num_pics: 4
+size: [1074, 1524]
+margin: 10
+output_dir: output
